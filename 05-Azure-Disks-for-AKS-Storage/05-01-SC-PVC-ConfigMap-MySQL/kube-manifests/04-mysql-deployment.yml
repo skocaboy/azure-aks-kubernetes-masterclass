@@ -28,7 +28,7 @@ spec:
               mountPath: /var/lib/mysql    
             - name: usermanagement-dbcreation-script
               mountPath: /docker-entrypoint-initdb.d #https://hub.docker.com/_/mysql Refer Initializing a fresh instance                                            
-      volumes: 
+      volumes:  # pod level resources
         - name: mysql-persistent-storage
           persistentVolumeClaim:
             claimName: azure-managed-disk-pvc
